@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="snn_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="snn_sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="7892513fs"></ZoomStartTime>
+      <ZoomEndTime time="8044216fs"></ZoomEndTime>
+      <Cursor1Time time="7960100fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/snn_sim/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/init_timer" type="array">
+      <obj_property name="ElementShortName">init_timer[9:0]</obj_property>
+      <obj_property name="ObjectShortName">init_timer[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/init_ren" type="logic">
+      <obj_property name="ElementShortName">init_ren</obj_property>
+      <obj_property name="ObjectShortName">init_ren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/init_done" type="logic">
+      <obj_property name="ElementShortName">init_done</obj_property>
+      <obj_property name="ObjectShortName">init_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/init_wen" type="logic">
+      <obj_property name="ElementShortName">init_wen</obj_property>
+      <obj_property name="ObjectShortName">init_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/waddr" type="array">
+      <obj_property name="ElementShortName">waddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[3199:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[3199:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/wdata[1]" type="logic">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/wdata[0]" type="logic">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /wdata" type="array">
+      <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /synapses_weight[783]" type="array">
+      <obj_property name="ElementShortName">[783][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[783][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /synapses_weight[782]" type="array">
+      <obj_property name="ElementShortName">[782][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[782][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /synapses_weight[781]" type="array">
+      <obj_property name="ElementShortName">[781][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[781][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /synapses_weight[780]" type="array">
+      <obj_property name="ElementShortName">[780][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[780][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /synapses_weight[779]" type="array">
+      <obj_property name="ElementShortName">[779][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[779][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/timestep" type="array">
+      <obj_property name="ElementShortName">timestep[6:0]</obj_property>
+      <obj_property name="ObjectShortName">timestep[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/timestep_en" type="logic">
+      <obj_property name="ElementShortName">timestep_en</obj_property>
+      <obj_property name="ObjectShortName">timestep_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in" type="array">
+      <obj_property name="ElementShortName">spike_in[783:0]</obj_property>
+      <obj_property name="ObjectShortName">spike_in[783:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in[783]" type="logic">
+      <obj_property name="ElementShortName">[783]</obj_property>
+      <obj_property name="ObjectShortName">[783]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in[782]" type="logic">
+      <obj_property name="ElementShortName">[782]</obj_property>
+      <obj_property name="ObjectShortName">[782]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in[781]" type="logic">
+      <obj_property name="ElementShortName">[781]</obj_property>
+      <obj_property name="ObjectShortName">[781]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in[780]" type="logic">
+      <obj_property name="ElementShortName">[780]</obj_property>
+      <obj_property name="ObjectShortName">[780]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in[779]" type="logic">
+      <obj_property name="ElementShortName">[779]</obj_property>
+      <obj_property name="ObjectShortName">[779]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /sum_potent_in" type="array">
+      <obj_property name="ElementShortName">sum_potent_in[47:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_potent_in[47:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /potent_in[783]" type="array">
+      <obj_property name="ElementShortName">[783][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[783][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /potent_in[782]" type="array">
+      <obj_property name="ElementShortName">[782][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[782][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /potent_in[781]" type="array">
+      <obj_property name="ElementShortName">[781][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[781][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /potent_in[780]" type="array">
+      <obj_property name="ElementShortName">[780][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[780][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /potent_in[779]" type="array">
+      <obj_property name="ElementShortName">[779][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[779][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /potent" type="array">
+      <obj_property name="ElementShortName">potent[47:0]</obj_property>
+      <obj_property name="ObjectShortName">potent[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_out" type="logic">
+      <obj_property name="ElementShortName">spike_out</obj_property>
+      <obj_property name="ObjectShortName">spike_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/spike_out" type="array">
+      <obj_property name="ElementShortName">spike_out[99:0]</obj_property>
+      <obj_property name="ObjectShortName">spike_out[99:0]</obj_property>
+   </wvobject>
+</wave_config>
