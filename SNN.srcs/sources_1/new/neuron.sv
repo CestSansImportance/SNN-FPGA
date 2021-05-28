@@ -20,8 +20,8 @@ module neuron # (
 );
     
     logic signed [POTENT_WIDTH-1 : 0] potent;  // membrane potential of this neuron
-    localparam   potent_thres = 'h00000a;      // threshold potential to trigger a spike
-    localparam   potent_rest  = 'h000000;      // resting potential
+    localparam   potent_thres = 'h000600000000;      // threshold potential to trigger a spike
+    localparam   potent_rest  = 'h000280000000;      // resting potential
     
     logic signed [WEIGHT_WIDTH-1 : 0] synapses_weight[PREV_LAYER_NEURONS-1 : 0];
     logic signed [WEIGHT_WIDTH-1 : 0] potent_in[PREV_LAYER_NEURONS-1 : 0];  // won't exceed weight width
@@ -29,7 +29,7 @@ module neuron # (
     
     logic       refrac_en;
     logic [3:0] refrac_timer;  // refractory period
-    localparam  refrac_len = 'd5;
+    localparam  refrac_len = 'd1;
     
     always_ff @(posedge clk)
     begin
@@ -52,15 +52,18 @@ module neuron # (
     always_ff @ (posedge clk)
     begin
         if (rst) begin
-            potent    <= '0;
+            potent    <= potent_rest;
             spike_out <= '0;
         end
         else if (en) begin
             if (refrac_en == 1'b0) begin
                 potent <= potent + sum_potent_in;
-                if (potent >= potent_thres) spike_out <= 1'b1;  // trigger a spike
+                if (potent >= potent_thres) begin
+                    spike_out <= 1'b1;  // trigger a spike
+                    potent    <= potent_rest;
+                end
                 if (spike_out == 1'b1) begin
-                    potent    <= potent_rest;  // enter refractory period
+                    // potent    <= potent_rest;
                     spike_out <= 1'b0;
                 end
             end

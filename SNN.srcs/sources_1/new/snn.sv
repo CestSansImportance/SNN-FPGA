@@ -16,7 +16,7 @@ module snn #(
     localparam HIDDEN_LAYER_NEURONS = 'd100;  // currently only one hidden layer
     localparam BRAM_LATENCY = 'd2;
     localparam INIT_STEPS = INPUT_LAYER_NEURONS + BRAM_LATENCY;
-    localparam TIMESTEP_MAX = 'd100 + BRAM_LATENCY;  // 100 lines in the input coe file
+    localparam TIMESTEP_MAX = 'd200 + BRAM_LATENCY;  // num of lines in the input coe file + bram latency
     
 
     logic [9:0] init_timer;  // [0, 784); iterate over the synaptic weight ROM to load weight into neurons
@@ -40,7 +40,7 @@ module snn #(
     );
     
 
-    logic [6:0] timestep;  // [0, 100)
+    logic [7:0] timestep;  // [0, 200)
     logic timestep_en;
     always_ff @(posedge clk)
     begin
@@ -52,7 +52,7 @@ module snn #(
     logic [INPUT_LAYER_NEURONS-1 : 0] input_spike;
     input_mem u_input_mem(
         .clka(clk),
-        .ena(en && timestep < HIDDEN_LAYER_NEURONS + 1'd1),
+        .ena(en && timestep < TIMESTEP_MAX - BRAM_LATENCY + 'd1),
         .addra(timestep),
         .douta(input_spike)
     );
