@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="7681050fs"></ZoomStartTime>
-      <ZoomEndTime time="7932451fs"></ZoomEndTime>
-      <Cursor1Time time="8886870fs"></Cursor1Time>
+      <ZoomStartTime time="9789666fs"></ZoomStartTime>
+      <ZoomEndTime time="10042067fs"></ZoomEndTime>
+      <Cursor1Time time="10000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="94"></ValueColumnWidth>
+      <ValueColumnWidth column_width="89"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/snn_sim/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -46,8 +46,8 @@
       <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/snn_sim/dut/timestep" type="array">
-      <obj_property name="ElementShortName">timestep[6:0]</obj_property>
-      <obj_property name="ObjectShortName">timestep[6:0]</obj_property>
+      <obj_property name="ElementShortName">timestep[7:0]</obj_property>
+      <obj_property name="ObjectShortName">timestep[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/snn_sim/dut/u_hidden_layer/\genblk1[0].u_neuron /spike_in" type="array">
@@ -68,8 +68,12 @@
       <obj_property name="ElementShortName">spike_out</obj_property>
       <obj_property name="ObjectShortName">spike_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/snn_sim/spike_out" type="array">
-      <obj_property name="ElementShortName">spike_out[99:0]</obj_property>
-      <obj_property name="ObjectShortName">spike_out[99:0]</obj_property>
+   <wvobject fp_name="/snn_sim/spike_cnt[0]" type="array">
+      <obj_property name="ElementShortName">[0][6:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/hidden_layer_spike_cnt" type="array">
+      <obj_property name="ElementShortName">hidden_layer_spike_cnt[99:0][6:0]</obj_property>
+      <obj_property name="ObjectShortName">hidden_layer_spike_cnt[99:0][6:0]</obj_property>
    </wvobject>
 </wave_config>

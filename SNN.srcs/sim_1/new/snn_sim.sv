@@ -7,7 +7,7 @@ module snn_sim();
     initial begin rst = 1'b1; #18; rst = 1'b0; end
     assign en = 1'b1;
     
-    logic [99:0] spike_out;
-    snn dut(clk, rst, en, spike_out);
+    logic [6:0] spike_cnt[99:0];
+    snn dut(clk, rst, en, spike_cnt);
     
 endmodule
