@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="9789666fs"></ZoomStartTime>
-      <ZoomEndTime time="10042067fs"></ZoomEndTime>
-      <Cursor1Time time="10000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="166007fs"></ZoomEndTime>
+      <Cursor1Time time="54753fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="177"></NameColumnWidth>
-      <ValueColumnWidth column_width="89"></ValueColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/snn_sim/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -68,12 +68,16 @@
       <obj_property name="ElementShortName">spike_out</obj_property>
       <obj_property name="ObjectShortName">spike_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/snn_sim/spike_cnt[0]" type="array">
-      <obj_property name="ElementShortName">[0][6:0]</obj_property>
-      <obj_property name="ObjectShortName">[0][6:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/snn_sim/dut/hidden_layer_spike_cnt" type="array">
       <obj_property name="ElementShortName">hidden_layer_spike_cnt[99:0][6:0]</obj_property>
       <obj_property name="ObjectShortName">hidden_layer_spike_cnt[99:0][6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/winner_neuron" type="array">
+      <obj_property name="ElementShortName">winner_neuron[6:0]</obj_property>
+      <obj_property name="ObjectShortName">winner_neuron[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/snn_sim/dut/result" type="array">
+      <obj_property name="ElementShortName">result[3:0]</obj_property>
+      <obj_property name="ObjectShortName">result[3:0]</obj_property>
    </wvobject>
 </wave_config>

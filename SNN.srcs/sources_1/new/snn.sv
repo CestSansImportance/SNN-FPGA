@@ -10,7 +10,7 @@ module snn #(
     input  logic  rst,
     input  logic  en,
     
-    output logic [CNT_WIDTH-1 : 0] hidden_layer_spike_cnt[HIDDEN_LAYER_NEURONS-1 : 0]
+    output logic [3:0] result
 );
 
     localparam INPUT_LAYER_NEURONS = 'd784;
@@ -18,7 +18,7 @@ module snn #(
     localparam BRAM_LATENCY = 'd2;
     localparam INIT_STEPS = INPUT_LAYER_NEURONS + BRAM_LATENCY;
     localparam TIMESTEP_MAX_I = TIMESTEP_MAX + BRAM_LATENCY;  // num of lines in the input coe file + bram latency
-    localparam CNT_WIDTH = 'd7;  // = width of TIMESTEP/2
+    localparam CNT_WIDTH = 'd7;  // width of spiking cnt, = width of TIMESTEP/2
 
     logic [9:0] init_timer;  // [0, 784); iterate over the synaptic weight ROM to load weight into neurons
     logic init_ren, init_wen, init_done;
@@ -94,5 +94,32 @@ module snn #(
                 .cnt(hidden_layer_spike_cnt[i])
             );
     endgenerate
+    
+    logic [3:0] assignment[HIDDEN_LAYER_NEURONS-1 : 0];  // class label assigned to each hidden layer neuron
+    logic [4 * HIDDEN_LAYER_NEURONS - 1 : 0] assignment_mem_out;
+    neuron2class_assignment_mem u_assignment_mem(
+        .clka(clk),
+        .ena(en && timestep < TIMESTEP_MAX + 'd1),
+        .addra(1'b0),
+        .douta(assignment_mem_out)
+    );
+    always_comb
+    begin
+        for (integer k = 0; k < HIDDEN_LAYER_NEURONS; k++)
+            assignment[k] = assignment_mem_out[k * 4 +: 4];
+    end
+    
+    // determine winner neuron (neuron with max spiking cnt)
+    //  and its assigned class is the final result
+    logic [6:0] winner_neuron;
+    max_comparer #(
+        .ITEM_CNT(HIDDEN_LAYER_NEURONS),
+        .DATA_WIDTH(CNT_WIDTH),
+        .TAG_WIDTH('d7)  // = width of HIDDEN_LAYER_NEURONS
+    ) u_spike_cnt_max(
+        .in_data(hidden_layer_spike_cnt),
+        .out_tag(winner_neuron)
+    );
+    assign result = assignment[winner_neuron];
     
 endmodule
